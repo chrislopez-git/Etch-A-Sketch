@@ -1,0 +1,28 @@
+/* :root is used to declare global variable */
+
+:root {
+    --background: white;
+    --border: black;
+}
+
+
+#main-container {
+    display: grid;
+    margin-top: 50px;
+    margin-left:50px;
+    width: 600px;
+    height: 600px;
+    
+    
+    
+
+}
+
+#options {
+    display: flex;
+}
+
+.grid-element {
+    border: 1px solid var(--border);
+    background-color: var(--background);
+  }
