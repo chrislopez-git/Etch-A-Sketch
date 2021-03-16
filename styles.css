@@ -5,6 +5,23 @@
     --border: black;
 }
 
+#flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 5px;
+    font-size: 50px;
+}
+
+
 
 #main-container {
     display: grid;
@@ -12,14 +29,42 @@
     margin-left:50px;
     width: 600px;
     height: 600px;
-    
-    
-    
+    justify-content: center;
+    align-self: center;
+
 
 }
 
 #options {
     display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#prompt {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 5px;
+    font-size: 30px;
+}
+
+.button:hover{
+    background-color: darkgray; 
+    color: white;
+
+}
+
+.button {
+    padding: 5px;
+    margin: 5px;
+    background-color: pink;
+    border: 2px solid black;
+    width: 60px;
+    transition-duration: 0.4s;
+    
 }
 
 .grid-element {

@@ -1,12 +1,14 @@
 const gridHolder = document.querySelector('#main-container');
-// gridHolder.style.backgroundColor = "green";
 
-window.addEventListener("load", setGrid(4));
+
+window.addEventListener("load", setGrid(16));
 
 
 function setGrid(size){
+     clearGrid();
     gridHolder.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     // use back ticks and ${} to use variable in string
+   
     fillGrid(size);
 }
 
@@ -28,6 +30,29 @@ function changeColor(e) {
     e.target.style.backgroundColor = `rgb(${ranR}, ${ranG}, ${ranB})`;
 
 }
+
+function clearGrid(){
+    // create array from childnodes (grid elements)
+    const gridArray = Array.from(gridHolder.childNodes);
+    gridArray.forEach((element) => {
+        gridHolder.removeChild(element);
+    });
+
+}
+
+
+const buttons =document.querySelectorAll('button');
+console.log(buttons); //check nodelist
+
+buttons.forEach((button) => {
+
+    button.addEventListener('click', () => {
+        // console.log(playRound(button.id, computerPlay()));
+        setGrid(button.id);
+    });
+});
+
+
 
 /* grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
